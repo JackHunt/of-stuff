@@ -33,7 +33,6 @@
 
 # Other crap
 .#*
-bin/*
-!bin/data
-!bin/data/*
+projects/*/bin/*
+!projects/*/bin/data/*
 obj
