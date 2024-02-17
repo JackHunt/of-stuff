@@ -34,3 +34,4 @@
 # Other crap
 .#*
 bin
+obj
