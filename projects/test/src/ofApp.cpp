@@ -8,13 +8,15 @@ void ofApp::setup(){
 
   ofSetBackgroundColor(0);
 
-  light.setPosition(1000, 1000, 2000);
+  light.setPosition(100, 100, 100);
   light.enable();
 
   material.setShininess(120);
   material.setSpecularColor(ofColor(255, 255, 255, 255));
   material.setDiffuseColor(ofColor(255, 255, 255, 255));
   material.setAmbientColor(ofColor(255, 255, 255, 255));
+
+  ofEnableDepthTest();
 }
 
 //--------------------------------------------------------------
