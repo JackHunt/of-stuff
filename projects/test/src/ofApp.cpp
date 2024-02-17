@@ -2,7 +2,19 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
+  soundPlayer.load("440Hz_44100Hz_16bit_05sec.wav");
+  soundPlayer.setLoop(true);
+  soundPlayer.play();
 
+  ofSetBackgroundColor(0);
+
+  light.setPosition(1000, 1000, 2000);
+  light.enable();
+
+  material.setShininess(120);
+  material.setSpecularColor(ofColor(255, 255, 255, 255));
+  material.setDiffuseColor(ofColor(255, 255, 255, 255));
+  material.setAmbientColor(ofColor(255, 255, 255, 255));
 }
 
 //--------------------------------------------------------------
@@ -12,7 +24,17 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+  easyCam.begin();
+  material.begin();
 
+  ofPushMatrix();
+  ofTranslate(ofGetWidth() / 2, ofGetHeight() / 2, 0);
+  ofRotateDeg(ofGetElapsedTimef() * rotationSpeed, 1, 1, 0);
+  ofDrawBox(0, 0, 0, 200);
+  ofPopMatrix();
+
+  material.end();
+  easyCam.end();
 }
 
 //--------------------------------------------------------------
@@ -66,6 +88,6 @@ void ofApp::gotMessage(ofMessage msg){
 }
 
 //--------------------------------------------------------------
-void ofApp::dragEvent(ofDragInfo dragInfo){ 
+void ofApp::dragEvent(ofDragInfo dragInfo){
 
 }

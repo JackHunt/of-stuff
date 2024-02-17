@@ -33,5 +33,7 @@
 
 # Other crap
 .#*
-bin
+bin/*
+!bin/data
+!bin/data/*
 obj
