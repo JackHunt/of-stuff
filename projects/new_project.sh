@@ -47,3 +47,6 @@ else
     --verbose \
     "./$project_name"
 fi
+
+# Nasty but I CBA to work around it.
+echo "Remember to chown -R user:user outside of the container."
