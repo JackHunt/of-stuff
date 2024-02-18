@@ -38,3 +38,4 @@ bin/*
 !bin/data/*
 obj
 projects/test/bin/test
+projects/ParticleSystems/bin/ParticleSystems
