@@ -1,5 +1,7 @@
 #include "ofApp.h"
 
+#include <iostream>
+
 //--------------------------------------------------------------
 void ofApp::setup(){
   soundPlayer.load("440Hz_44100Hz_16bit_05sec.wav");
@@ -41,55 +43,55 @@ void ofApp::draw(){
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-
+  std::cout << "keyPressed: " << key << std::endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-
+  std::cout << "keyReleased: " << key << std::endl;
 }
 
 //--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ){
-
+void ofApp::mouseMoved(int x, int y){
+  std::cout << "mouseMoved: " << x << ", " << y << std::endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button){
-
+  std::cout << "mouseDragged: " << x << ", " << y << ", " << button << std::endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::mousePressed(int x, int y, int button){
-
+  std::cout << "mousePressed: " << x << ", " << y << ", " << button << std::endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button){
-
+  std::cout << "mouseReleased: " << x << ", " << y << ", " << button << std::endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseEntered(int x, int y){
-
+  std::cout << "mouseEntered: " << x << ", " << y << std::endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::mouseExited(int x, int y){
-
+  std::cout << "mouseExited: " << x << ", " << y << std::endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::windowResized(int w, int h){
-
+  std::cout << "windowResized: " << w << ", " << h << std::endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::gotMessage(ofMessage msg){
-
+  std::cout << "gotMessage: " << msg.message << std::endl;
 }
 
 //--------------------------------------------------------------
 void ofApp::dragEvent(ofDragInfo dragInfo){
-
+  std::cout << "dragEvent: " << dragInfo.position << std::endl;
 }
