@@ -25,6 +25,12 @@ WORKDIR /root/openFrameworks/scripts/linux
 RUN ./download_libs.sh
 RUN ./compileOF.sh -j8
 
+WORKDIR /root/openFrameworks/
+RUN git submodule init && git submodule update
+
+WORKDIR /root/openFrameworks/apps/projectGenerator/commandLine
+RUN make Release
+
 RUN mkdir /projects && ln -s /projects /root/openFrameworks/apps/myApps
 WORKDIR /root/openFrameworks/apps/myApps
 
