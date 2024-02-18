@@ -2,6 +2,8 @@
 
 #include "ofMain.h"
 
+#include <Particle.hpp>
+
 class ofApp : public ofBaseApp {
 public:
   void setup();
